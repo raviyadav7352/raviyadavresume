@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #78939b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --bgcolor: #fff;
+    --color: #000;
+    --bg-progress: #acbbbc78;
+    --bg-progress-after: #71709aa8;
+}
+
+.positon-rel {
+    position: relative;
+}
+
+.p10 {
+    padding: 10px;
+}
+.p16 {
+    padding: 16px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.wrapper {
+    max-width: 80vw;
+}   
+.box-shd{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .4);
+}
+
+.page-left {
+    width: 30%;
+    border-radius: 10px 0 0 10px;
+    background: #e9ebeb;
+}
+
+.contacts {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 4px;
+}
+
+.progress {
+    height: 6px;
+    background: var(--bg-progress);
+    border-radius: 25px;
+    margin: 10px 0;
+}
+
+.fillbar {
+    position: absolute;
+    height: inherit;
+    background: var(--bg-progress-after);
+    border-radius: inherit;
+}
+
+.languages-heading {
+    margin: 20px 0 10px;
+}
+
+.skill-head-box {
+    margin: 10px 0;
+}
+
+.contact {
+    margin: 10px 0;
+}
+
+.my-image {
+    width: 100%;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.name {
+    font-size: 20px;
+    background: unset;
+    color: black !important;
+}
+
+.img-box {
+    text-align: center;
+}
+.page-right {
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* .eduaction {
+    padding: 10px;
+} */
+
+.objective-heading {
+    margin-bottom: 8px;
+}
+.main-heading {
+    margin-bottom: 8px;
+    text-shadow: 2px 3px 4px #caf0f6b8;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+small.role {
+    color: cadetblue;
+    font-size: 18px;
+}
+
+.academic-table {
+    width: 100%;
+}
+.academic-head {
+    border-radius: 4px 4px 0 0;
+}
+
+.academic-table ,.academic-table td, .academic-table th, .academic-table table {
+    border: 1px solid #78939b;
+    padding: 10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.training-heading {
+    margin-bottom: 8px;
+}
+
+/* .training-list {
+    margin: 10px 20px;
+} */
+
+.training-item {
+    margin-bottom: 4px;
+}
+.projects {
+    margin: 10px 0;
+}
+ul {
+    margin: 10px 20px;
+}
+li {
+    margin: 3px 0;
+}
+.detail-name {
+    list-style: none;
+    font-style: italic;
+    text-align: right;
+}
+
+/* need change */
+/* .page-right {
+    width: calc(69% - 2px);
+} */
+/* .personel {
+    width: 100%;
+} */
+.project-table-title {
+    color: brown;
+    display: flex;
+    margin: 0 5px 4px;
+    justify-content: space-between;
+    gap: 10px;
+}
+.project1 {
+    margin: 10px 0 10px 16px;
+}
+.project-head {
+    color: #5d585b;
+    margin-bottom: 6px;
+}
+.semicolan-project {
+    font-size: 20px;
+    color: darkgreen;
+}
+.academic {
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px 0;
+    outline: auto #777879;
+}
+h3{
+    background: #444540;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+}
