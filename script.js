@@ -3,9 +3,9 @@ let MyResume = (() => {
     let imageBox = [{ image: "images/raviimg.jpg" }]
     let contacts = {
         // positon: { name: "Frontend Developer", icon: "work", myLocation: "#" },
-        location: { name: "Urrapakkam, Chennai", icon: "home", myLocation: "https://goo.gl/maps/cMVmasK8YWGSVh2A8" },
-        emailid: { name: "ravi943117@gmail.com", icon: "email", myLocation: "mailto:ravi943117@gmail.com" },
-        mobile: { name: "+91 7352746905", icon: "phone", myLocation: "tel:7352746905" }
+        location: { name: "Urrapakkam, Chennai", icon: "home_pin", myLocation: "https://goo.gl/maps/cMVmasK8YWGSVh2A8" },
+        emailid: { name: "ravi943117@gmail.com", icon: "forward_to_inbox", myLocation: "mailto:ravi943117@gmail.com" },
+        mobile: { name: "+91 7352746905", icon: "wifi_calling_3", myLocation: "tel:7352746905" }
     }
     let skills = {
         skill1: { name: "ReactJs", grade: 70 },
@@ -175,9 +175,9 @@ let MyResume = (() => {
                                     <tr>
                                         <td class="project-table-title project-discription">Description <span class="semicolan-project">:</span></td>
                                         <td>${elem.Description}
-                                            <a target="_blank" href=${elem.weblink}>
+                                            <a class="project-link" target="_blank" href=${elem.weblink}>
                                                 <span class="material-symbols-rounded link-icon">
-                                                    ${elem.weblink && "open_in_new"}
+                                                    ${elem.weblink && "link"}
                                                 </span>
                                             </a>
                                         </td>
