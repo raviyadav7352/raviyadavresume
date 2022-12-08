@@ -7,6 +7,11 @@ let MyResume = (() => {
         emailid: { name: "ravi943117@gmail.com", icon: "forward_to_inbox", myLocation: "mailto:ravi943117@gmail.com" },
         mobile: { name: "+91 7352746905", icon: "phone_in_talk", myLocation: "tel:7352746905" }
     }
+    let socialAcc = [
+        { name: "LinkedIn", link: "https://www.linkedin.com/mwlite/in/ravi-kumar-yadav-05032120a", iconClass: "fa-linkedin" },
+        { name: "GitHub", link: "https://github.com/raviyadav7352", iconClass: "fa-github" },
+        { name:"Projects", text:`<b class="test">P</b>`, link: "#", iconClass: "fa-file" }
+    ]
     let skills = {
         skill1: { name: "ReactJs", grade: 70 },
         skill2: { name: "JavaScript", grade: 80 },
@@ -80,7 +85,9 @@ let MyResume = (() => {
     let $parentDom = '';
     /* code initialization on load */
     let _init = () => {
+
         $parentDom = $('#parentDom')
+        socialAccShow();
         contactsShow();
         skillShow();
         languageShow();
@@ -88,13 +95,21 @@ let MyResume = (() => {
         projectShow();
         allListShow(listsdetail);
         imageShow();
+        
 
+    }
+    let socialAccShow = () =>{
+        let accHtml = '';
+        socialAcc.forEach((item)=>{
+            accHtml += ` <li class="soft-hobby"><a title=${item.name} class="soft-hobby-a" target="_blank" href=${item.link}><i class="fa ${item.iconClass}"></i>${item.text?item.text:""}</a></li>`
+        })
+        $parentDom.find("#social").append(accHtml)
     }
     let imageShow = () => {
         let imageHtml = '';
         imageBox.forEach((item) => {
-            imageHtml = `<img src=${item.image} alt="my image" class="my-image">
-                        `
+            imageHtml = `<img src=${item.image} alt="my image" class="my-image">`
+                        
         })
         $parentDom.find("#imagebox").append(imageHtml)
     }
@@ -153,6 +168,11 @@ let MyResume = (() => {
         tableRowRap += `<tr>${tableHeadHtml}</tr>`
         $parentDom.find("#academic-table").append(tableRowRap, tableRowRap1)
     }
+    $("#checking").click(function(){
+        console.log("clicked")
+        $("#body").toggleClass("dark");
+    })
+    
     let projectShow = () => {
         let projectHtml = '';
         project.forEach((elem) => {
