@@ -5,7 +5,7 @@ let MyResume = (() => {
         // positon: { name: "Frontend Developer", icon: "work", myLocation: "#" },
         location: { name: "Urrapakkam, Chennai", icon: "home_pin", myLocation: "https://goo.gl/maps/cMVmasK8YWGSVh2A8" },
         emailid: { name: "ravi943117@gmail.com", icon: "forward_to_inbox", myLocation: "mailto:ravi943117@gmail.com" },
-        mobile: { name: "+91 7352746905", icon: "wifi_calling_3", myLocation: "tel:7352746905" }
+        mobile: { name: "+91 7352746905", icon: "phone_in_talk", myLocation: "tel:7352746905" }
     }
     let skills = {
         skill1: { name: "ReactJs", grade: 70 },
@@ -57,8 +57,8 @@ let MyResume = (() => {
         }
     ]
     let traning = [
-        "Completed 30 days of training on Python programming from Uflairs Pvt Ltd",
-        "Completed course on React-The Complete Guide (hooks, React Router, Redux) from Udemy"
+        "Completed 30 days of training on Python programming from <b>Uflairs Pvt Ltd</b>",
+        "Completed course on React-The Complete Guide (hooks, React Router, Redux) from <b>Udemy</b>"
     ]
     let curricular = [
         "Participated in the “Flip the Script Challenges” organized by EPAM system, Inc.",
@@ -138,8 +138,8 @@ let MyResume = (() => {
         let tableRowRap1 = '';
         let tableDiscHtml = '';
 
-        tableData.forEach((item) => {
-            item.forEach((elem, index) => {
+        tableData.forEach((item, index) => {
+            item.forEach((elem) => {
                 if (index == 0) {
                     tableHeadHtml += `<th class="acad-table-head">${elem}</th>`
                 }
@@ -158,7 +158,12 @@ let MyResume = (() => {
         project.forEach((elem) => {
 
             projectHtml += `<li class="project1">
-                                <h4 class="project-head">${elem.project}</h4>
+                                <h4 class="project-head">${elem.project}
+                                <a class="project-link" target="_blank" href=${elem.weblink}>
+                                                <span class="material-symbols-rounded link-icon project-link-icon">
+                                                    ${elem.weblink && "open_in_new"}
+                                                </span>
+                                            </a></h4>
                                 <table class="project-table">
                                     <tr>
                                         <td class="project-table-title">Technologies<span class="semicolan-project">:</span></td>
@@ -174,13 +179,7 @@ let MyResume = (() => {
                                     </tr>
                                     <tr>
                                         <td class="project-table-title project-discription">Description <span class="semicolan-project">:</span></td>
-                                        <td>${elem.Description}
-                                            <a class="project-link" target="_blank" href=${elem.weblink}>
-                                                <span class="material-symbols-rounded link-icon">
-                                                    ${elem.weblink && "link"}
-                                                </span>
-                                            </a>
-                                        </td>
+                                        <td class="discription">${elem.Description}</td>
                                     </tr>
                                 </table>
                             </li>`
@@ -210,12 +209,12 @@ let MyResume = (() => {
             let contact = contacts[key]
             contactHtml += `
             <div class="contact d-flex gap10 align-center">    
-              <a target="_blank" href=${contact.myLocation}><i class="icon material-symbols-rounded">${contact.icon}</i></a>
+              <a target="_blank" href=${contact.myLocation}><i class="link-icon icon material-symbols-rounded">${contact.icon}</i></a>
                 <span class="contact-name">${contact.name}</span>
             </div>`
 
         };
-        contactsBody.html(contactHtml)
+        contactsBody.prepend(contactHtml)
     }
 
     return {
