@@ -9,28 +9,28 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="media.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>ravi kr yadav</title>
 </head>
 
 <body id="body">
-    <div class="wrapper p10 d-flex " id="parentDom">
-        <div class="checkbox" >
+    <div class="wrapper m20 d-flex  box-shd" id="parentDom">
+        <div class="checkbox">
             <input class="toggle" type="checkbox" id="checking">
             <label class="label" for="checking"></label>
         </div>
-        <div class="page-left  p16">
-            <div class="img-box" id="imagebox">
-                <!-- <img src="images/raviimg.jpg" alt="my image" class="my-image">
-                <h3 class="name">Ravi Kumar Yadav</h3> -->
+        <div class="page-left p16">
+            <div class="main-heading small-screen">Ravi Kumar Yadav <small class="role">( Frontend Developer ) </small>
+            </div>
+            <div class="img-box big-screen" id="imagebox">
             </div>
             <div class="contacts" id="contacts">
                 <div class="social-body">
                     <ul class="social" id="social">
-                        <!-- <li class="soft-hobby"><a href="https://goo.gl/maps/cMVmasK8YWGSVh2A8"><i class="fa fa-linkedin"></i></a></li>
-                        <li class="soft-hobby"><a href="#"></a><i class="fa fa-github"></i></a></li>
-                        <li class="soft-hobby"><a href="#"></a><i class="fa fa-file"></i></a></li> -->
+                        <!-- social account data render  -->
                     </ul>
                 </div>
             </div>
@@ -52,67 +52,76 @@
                     <p class="languages-head">Languages</p>
                 </div>
             </div>
-            <div class="soft-skills-body p-top10">
-                <h3 class="soft-skills-head">Soft Skills</h3>
+            <div class="soft-skills-body p-top10 big-screen">
+                <h3 class="soft-skills-head heading">Soft Skills</h3>
                 <ul class="soft-skills list-body" id="SoftSkills">
-                    
+                    <!-- softskills for large screen data render  -->
                 </ul>
             </div>
-            <div class="hobbies-body p-top10">
-                <h3 class="hobbies-head">Interests</h3>
-                <ul class="hobbies list-body " id="hobbies">
-                   
-                </ul>
+            <div class="hobbies-body p-top10 big-screen">
+                <h3 class="hobbies-head heading">Interests</h3>
+                <ul class="hobbies list-body " id="hobbies"></ul>
             </div>
-            
+
         </div>
         <!-- right side  -->
         <div class="page-right">
             <div class="eduaction ">
                 <div class="objective">
 
-                    <div class="main-heading">Ravi Kumar Yadav <small class="role">( Frontend Developer ) </small></div>
-                    <h3 class="objective-heading">Objective</h3>
+                    <div class="main-heading big-screen">Ravi Kumar Yadav <small class="role">( Frontend Developer )
+                        </small></div>
+                    <h3 class="objective-heading heading">Objective</h3>
                     <p class="objective-text">
                         Passionate and tech enthusiast with a result-oriented mindset,
                         searching for an organization where I can enhance my knowledge and software development skills.
                     </p>
                 </div>
                 <div class="academic p-top16">
-                    <h3 class="academic-head">Academic Qualifications</h3>
+                    <h3 class="academic-head heading">Academic Qualifications</h3>
                     <table class="academic-table" id="academic-table">
-                        
+                        <!-- table data from js -->
                     </table>
                 </div>
                 <div class="training p-top16">
-                    <h3 class="training-heading">Training</h3>
+                    <h3 class="training-heading heading">Training</h3>
                     <ul class="training-list list-body" id="training">
-                       
+                        <!-- training data render  -->
                     </ul>
                 </div>
             </div>
             <div class="projects p-top10">
-                <h3 class="projects-heading">Projects</h3>
+                <h3 class="projects-heading heading">Projects</h3>
                 <ol class="project" id="project">
-                   <!--  -->
+                    <!-- project data render  -->
                 </ol>
                 <div class="curricular-body p-top10">
-                    <h3 class="curricular-head">Extra-Curricular Activities:</h3>
+                    <h3 class="curricular-head heading">Extra-Curricular Activities:</h3>
                     <ul class="curriculars list-body" id="curriculars">
-
-                       
+                        <!-- curricular data render  -->
                     </ul>
                 </div>
-              
+
+            </div>
+            <div class="soft-skills-body p-top10 small-screen">
+                <h3 class="soft-skills-head heading">Soft Skills</h3>
+                <ul class="soft-skills list-body" id="SoftSkills-big">
+                    <!-- soft-skills data render  -->
+                </ul>
+            </div>
+            <div class="hobbies-body p-top10 small-screen">
+                <h3 class="hobbies-head heading">Interests</h3>
+                <ul class="hobbies list-body " id="hobbies-big">
+                    <!-- hobbies data render  -->
+                </ul>
             </div>
             <div class="personel p-top10">
-                <h3 class="personel-head">Personal detail:</h3>
+                <h3 class="personel-head heading">Personal detail:</h3>
                 <ul class="personnel-detaails list-body" id="personel">
-                  
+
                 </ul>
                 <div class="detail-name" id="detail">
-                    <!-- <p>Ravi Kumar Yadav</p>
-                    <p>Chennai</p> -->
+                    <!-- pesonel detail data render  -->
                 </div>
             </div>
 
@@ -120,6 +129,7 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="dataStore.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             MyResume.init();
