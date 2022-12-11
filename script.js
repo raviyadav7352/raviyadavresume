@@ -1,11 +1,8 @@
 let MyResume = (() => {
-
-
-    let $parentDom = '';
+    let $parentDom = $('#parentDom');
+    let $darkSwitch = $("#checking")
     /* code initialization on load */
     let _init = () => {
-
-        $parentDom = $('#parentDom')
         socialAccShow();
         contactsShow();
         skillShow();
@@ -14,8 +11,8 @@ let MyResume = (() => {
         projectShow();
         allListShow(listsdetail);
         imageShow();
-        darkModeset();
-
+        bidnEvents();
+        syncDarkMode();
 
     }
     let socialAccShow = () => {
@@ -155,42 +152,26 @@ let MyResume = (() => {
         contactsBody.prepend(contactHtml)
     }
 
-    // this function for localstorage setup
-    let darkMode = { mode: "" }
-    function handleData() {
-        changeMode = JSON.parse(localStorage.getItem("mode"))
-        if (changeMode == null) {
-            localStorage.setItem('mode', JSON.stringify(darkMode))
-            changeMode = JSON.parse(localStorage.getItem("mode"))
-        }
+    let handleDarkmode = (isDarkMode) => {
+        $('body').toggleClass('dark', isDarkMode);
+        $darkSwitch.attr("checked", isDarkMode)
+        localStorage.setItem('dark', isDarkMode);
     }
-    function syncDarkMode() {
-        localStorage.setItem('mode', JSON.stringify(darkMode))
-    }
-    handleData()
-    // dark mode 
 
-    let mode = changeMode.mode
-    let darkSwitch = $("#checking")
-    darkSwitch.change(function () {
-        let status = darkSwitch.is(":checked")
-        if (status) {
-            darkMode.mode = "dark"
-            syncDarkMode()
-            handleData()
-            $("#body").addClass("dark");
-        } else {
-            darkMode.mode = ""
-            syncDarkMode()
-            handleData()
-            $("#body").removeClass("dark");
-        }
-    })
-    function darkModeset() {
-        $("#body").toggleClass(mode);
-        if ($("#body").hasClass("dark")) {
-            darkSwitch.attr("checked", "checked")
-        }
+    let syncDarkMode = () => {
+        let darkMode = JSON.parse(localStorage.getItem('dark'));
+        handleDarkmode(darkMode);
+    }
+
+    let bidnEvents = () => {
+        $parentDom.change(function (ev) {
+            let element = $(ev.target)
+            let purpose = element.attr("purpose")
+            if (purpose == "darkMode") {
+                let status = $darkSwitch.is(":checked");
+                handleDarkmode(status);
+            }
+        })
     }
 
 
