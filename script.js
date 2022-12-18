@@ -17,14 +17,14 @@ let MyResume = (() => {
     }
     let socialAccShow = () => {
         let accHtml = '';
-        socialAcc.forEach((item) => {
+        dataStore.socialAcc.forEach((item) => {
             accHtml += ` <li class="soft-hobby"><a title=${item.name} class="soft-hobby-a" target="_blank" href=${item.link}><i class="fa ${item.iconClass}"></i>${item.text ? item.text : ""}</a></li>`
         })
         $parentDom.find("#social").append(accHtml)
     }
     let imageShow = () => {
         let imageHtml = '';
-        imageBox.forEach((item) => {
+        dataStore.imageBox.forEach((item) => {
             imageHtml = `<img src=${item.image} alt="my image" class="my-image">`
 
         })
@@ -34,8 +34,8 @@ let MyResume = (() => {
     let skillShow = () => {
         let skillBody = $parentDom.find("#skills");
         let skillHtml = '';
-        for (let key in skills) {
-            let skill = skills[key]
+        for (let key in dataStore.skills) {
+            let skill = dataStore.skills[key]
             skillHtml += `
             <div class="skill">
                 <p class="skill-name">${skill.name}<span class="skill-p">${skill.grade}<span class="percent-sign">%</span></span></p>
@@ -50,8 +50,8 @@ let MyResume = (() => {
     let languageShow = () => {
         let langBody = $("#languages")
         let langHtml = '';
-        for (let key in languages) {
-            let lang = languages[key]
+        for (let key in dataStore.languages) {
+            let lang = dataStore.languages[key]
             langHtml += `
             <div class="language">
                 <p class="skill-name">${lang.name} <span class="skill-p">${lang.grade}<span class="percent-sign">%</span></span></p>
@@ -70,7 +70,7 @@ let MyResume = (() => {
         let tableRowRap1 = '';
         let tableDiscHtml = '';
 
-        tableData.forEach((item, index) => {
+        dataStore.tableData.forEach((item, index) => {
             item.forEach((elem) => {
                 if (index == 0) {
                     tableHeadHtml += `<th class="acad-table-head">${elem}</th>`
@@ -88,7 +88,7 @@ let MyResume = (() => {
 
     let projectShow = () => {
         let projectHtml = '';
-        project.forEach((elem) => {
+        dataStore.project.forEach((elem) => {
 
             projectHtml += `<li class="project1">
                                 <h4 class="project-head">${elem.project}
@@ -141,8 +141,8 @@ let MyResume = (() => {
     let contactsShow = () => {
         let contactsBody = $("#contacts")
         let contactHtml = '';
-        for (let key in contacts) {
-            let contact = contacts[key]
+        for (let key in dataStore.contacts) {
+            let contact = dataStore.contacts[key]
             contactHtml += `
             <div class="contact d-flex gap10 align-center">    
               <a target="_blank" href=${contact.myLocation}><i class="link-icon icon material-symbols-rounded">${contact.icon}</i></a>
