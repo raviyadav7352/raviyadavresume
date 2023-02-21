@@ -2,7 +2,7 @@ let dataStore = {
     imageBox:[{ image: "images/raviimg.jpg" }],
     contacts:{
         // positon: { name: "Frontend Developer", icon: "work", myLocation: "#" },
-        location: { name: "Urrapakkam, Chennai", icon: "home_pin", myLocation: "https://goo.gl/maps/cMVmasK8YWGSVh2A8" },
+        location: { name: "Whitefield, Bangalore KA", icon: "home_pin", myLocation: "https://goo.gl/maps/oyZxGLmDB612AgVX9" },
         emailid: { name: "ravi943117@gmail.com", icon: "forward_to_inbox", myLocation: "mailto:ravi943117@gmail.com" },
         mobile: { name: "+91 7352746905", icon: "phone_in_talk", myLocation: "tel:7352746905" }
     },
@@ -13,14 +13,16 @@ let dataStore = {
     ],
     skills:{
         skill1: { name: "ReactJs", grade: 70 },
-        skill2: { name: "JavaScript", grade: 80 },
-        skill3: { name: "HTML5", grade: 80 },
-        skill4: { name: "CSS", grade: 70 },
-        skill5: { name: "Jquery", grade: 60 },
-        skill6: { name: "BootStrap", grade: 70 },
-        skill7: { name: "Maerialise CSS", grade: 70 },
-        skill8: { name: "C programming", grade: 70 },
-        skill9: { name: "Git", grade: 70 }
+        skill2: { name: "Angular", grade: 70 },
+        skill3: { name: "TypeScript", grade: 70 },
+        skill4: { name: "JavaScript", grade: 80 },
+        skill5: { name: "HTML5", grade: 90 },
+        skill6: { name: "CSS", grade: 80 },
+        skill7: { name: "Jquery", grade: 70 },
+        skill8: { name: "BootStrap", grade: 70 },
+        skill9: { name: "Maerialise CSS", grade: 70 },
+        skill10: { name: "C programming", grade: 70 },
+        skill11: { name: "Git", grade: 70 }
     },
     languages:{
         language1: { name: "English", grade: 70 },
@@ -28,7 +30,7 @@ let dataStore = {
     },
     tableData:[
         ["Courses", "College", "University", "Percentage", "Year"],
-        ["B.Tech(EE)", "JECRC, Jaipur", "RTU, Kota", "82.4", "2022"],
+        ["B.Tech", "JECRC, Jaipur", "RTU, Kota", "82.3", "2022"],
         ["H.S.C", "RLSY, Koderma", "JAC, Ranchi", "66.8", "2017"],
         ["S.S.C", "KRSVM, Koderma", "CBSE", "72.2", "2015"]
     ],
@@ -36,7 +38,7 @@ let dataStore = {
         {
             project: "Wedding Decor Web-Application",
             Technologies: "ReactJS, HTML5, CSS3, Bootstrap",
-            Myrole: "frontend development, api handle",
+            Myrole: "frontend development, API handling",
             Database: "Google Firebase",
             Server: "NodeJS",
             weblink: "https://raviyadav7352.github.io/wedding-app",
@@ -66,8 +68,8 @@ let dataStore = {
 
 let extraActivity = {
     traning:[
-        "Completed 30 days of training on Python programming from <b>Uflairs Pvt Ltd</b>",
-        "Completed course on React-The Complete Guide (hooks, React Router, Redux) from <b>Udemy</b>"
+        "Completed course on React-The Complete Guide (hooks, React Router, Redux) from <b>Udemy</b>",
+        "Completed course on Angular-The Complete Guide from <b>Udemy</b>"
     ],
     curricular:[
         "Participated in the “Flip the Script Challenges” organized by EPAM system, Inc.",
